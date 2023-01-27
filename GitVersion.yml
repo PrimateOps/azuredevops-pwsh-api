@@ -1,0 +1,9 @@
+mode: ContinuousDeployment
+branches:
+  main:
+    tag: beta
+  feature:
+    increment: Minor
+  release:
+    regex: ^releases?[/-]
+    tag: rc
