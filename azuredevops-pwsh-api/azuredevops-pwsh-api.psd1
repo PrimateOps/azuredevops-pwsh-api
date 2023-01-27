@@ -25,7 +25,7 @@
     Description = 'This PowerShell module acts as a wrapper to Azure DevOps Services APIs. It is generally used in Azure Pipelines, but can also be leveraged via the CLI.'
     
     # Minimum version of the PowerShell engine required by this module
-    PowerShellVersion = '7.0.0'
+    PowerShellVersion = '7.2.0'
     
     # Name of the PowerShell host required by this module
     # PowerShellHostName = ''
