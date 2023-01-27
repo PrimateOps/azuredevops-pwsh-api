@@ -1,4 +1,4 @@
-# Introduction
+# Module Design
 
 The module is designed... to be modular :). Code that is reused in multiple functions is split into its own function. In most cases, reusable functions aren't intended to be exposed (though this isn't a hard rule).
 
