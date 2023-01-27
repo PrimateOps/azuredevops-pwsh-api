@@ -36,9 +36,9 @@ All functions that make an Azure DevOps API call have a common scaffolding and f
 
 ```mermaid
 graph LR;
-    A((Get-AzdoRepo)) -->|Validate Input| B{Good?}
+    A((Get-AzdoRepo)) -->|Validate Input| B{Valid Input?}
     B --> |No| G(Throw Error)
-    B --> |Get API Uri |C(Read-AzdoApiList)
+    B --> |Yes |C(Read-AzdoApiList)
     C --> |Process Headers | D(Invoke-AzdoApi)
     D --> |Call API|E[Invoke-RestMethod]
     E --> |Return Result|A
