@@ -34,7 +34,7 @@ Contains the Pester test scripts.
 
 All functions that make an Azure DevOps API call have a common scaffolding and follow the same flow:
 
-:::mermaid
+```mermaid
 graph LR;
     A((Get-AzdoRepo)) -->|Validate Input| B{Good?}
     B --> |No| G(Throw Error)
@@ -42,7 +42,7 @@ graph LR;
     C --> |Process Headers | D(Invoke-AzdoApi)
     D --> |Call API|E[Invoke-RestMethod]
     E --> |Return Result|A
-:::
+```
 
 The steps in this diagram can be summarised as:
 
