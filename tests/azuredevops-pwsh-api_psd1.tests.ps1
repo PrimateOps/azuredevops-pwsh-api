@@ -11,8 +11,8 @@ Describe 'Validating Module Manifest'{
             $dataFile.RootModule | Should -Be ('.\{0}.psm1' -f $moduleName)
         }
 
-        it 'ModuleVersion needs to be left as 0.0.1'{
-            $dataFile.ModuleVersion | Should -Be '0.0.1'
+        it 'ModuleVersion needs to be left as 0.1.0'{
+            $dataFile.ModuleVersion | Should -Be '0.1.0'
         }
 
         it 'Description property must exist'{
@@ -20,7 +20,7 @@ Describe 'Validating Module Manifest'{
         } 
 
         it 'Description cannot be blank'{
-            [String]::IsNullOrWhiteSpace($dataFile.Description) | Should -BeFalse -Because "Internal users need to have an idea of what this module does when they search our internal catalogue"
+            [String]::IsNullOrWhiteSpace($dataFile.Description) | Should -BeFalse -Because "Users need to have an idea of what this module does when they search our internal catalogue"
         } 
 
         it 'Module GUID is valid'{
@@ -31,8 +31,8 @@ Describe 'Validating Module Manifest'{
             $dataFile.PowerShellVersion | Should -Be '7.2.0'
         }
 
-        it 'FunctionsToExport should not be a blank list'{
-            $dataFile.FunctionsToExport.Count | Should -BeGreaterThan 0
+        it 'ScriptsToProcess should not be a blank list'{
+            $dataFile.ScriptsToProcess.Count | Should -BeGreaterThan 0
         }
 
     }#context
