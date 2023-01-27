@@ -10,9 +10,9 @@ TODO: Installation process (internal package feed), other dependencies etc.
 
 Contributions are welcome! Before doing so, please consider the following guidelines:
 
-[Development Guidelines](.\docs\developmentguidelines.md)
+[Development Guidelines](./docs/developmentguidelines.md)
 
-[Module Design](.\docs\moduledesign.md)
+[Module Design](./docs/moduledesign.md)
 
 ## Build and Test
 
