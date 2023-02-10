@@ -4,6 +4,10 @@ This PowerShell module provides and abstraction layer around existing Azure DevO
 
 ## Getting Started
 
+### Pipeline is coming
+
+Pipeline is still coming - it will publish this module publicly. If you want to try it in the meantime, copy the content from ./azuredevops-pwsh-api into a directory within your `$env:PSModulePath`.
+
 TODO: Installation process (internal package feed), other dependencies etc.
 
 ## Contribute

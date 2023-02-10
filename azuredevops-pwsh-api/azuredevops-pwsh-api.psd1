@@ -22,7 +22,7 @@
     Copyright = '(c) OpsMonkey. All rights reserved.'
     
     # Description of the functionality provided by this module
-    Description = 'This PowerShell module acts as a wrapper to Azure DevOps Services APIs. It is generally used in Azure Pipelines, but can also be leveraged via the CLI.'
+    Description = 'This PowerShell module acts as a wrapper to Azure DevOps Services APIs. It can be used in pipelines or via the CLI.'
     
     # Minimum version of the PowerShell engine required by this module
     PowerShellVersion = '7.2.0'
