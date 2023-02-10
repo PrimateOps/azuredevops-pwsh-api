@@ -1,0 +1,25 @@
+{
+    "groupEntitlements": {
+        "add"    : "https://vsaex.dev.azure.com/{organization}/_apis/groupentitlements?api-version=4.1-preview.1",
+        "list"   : "https://vsaex.dev.azure.com/{organization}/_apis/groupentitlements?api-version=4.1-preview.1",
+        "delete" : "https://vsaex.dev.azure.com/{organization}/_apis/groupentitlements/{groupId}?ruleOption={ruleOption}&removeGroupMembership={removeGroupMembership}&api-version=4.1-preview.1"
+    },
+    "repositories": {
+        "get" : "https://dev.azure.com/{organization}/{project}/_apis/git/repositories/{repositoryId}?api-version=4.1"
+    },
+    "groups": {
+        "list" : "https://vssps.dev.azure.com/{organization}/_apis/graph/groups?&api-version=6.0-preview.1",
+        "create": "https://vssps.dev.azure.com/{organization}/_apis/graph/groups?api-version=6.0-preview.1"
+    },
+    "projects": {
+        "list" : "https://dev.azure.com/{organization}/_apis/projects?api-version=6.0",
+        "get"  : "https://dev.azure.com/{organization}/_apis/projects/{projectId}?api-version=6.0"
+    },
+    "users": {
+        "list" : "https://vssps.dev.azure.com/{organization}/_apis/graph/users?api-version=6.0-preview.1",
+        "add" : "https://vssps.dev.azure.com/{organization}/_apis/graph/users?groupDescriptors={groupDescriptors}&api-version=6.0-preview.1"
+    },
+    "descriptors" : {
+        "get" : "https://vssps.dev.azure.com/{organization}/_apis/graph/descriptors/{storageKey}?api-version=6.0-preview.1"
+    }
+}
