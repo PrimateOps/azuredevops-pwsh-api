@@ -26,8 +26,14 @@ param(
 
     # Leverage the build variables provided by BuildHelpers module (exposed at build time)
 
-    # get a handle of the script to be tested through convention (case insensitive replace):
-    $sut = ((((($Path.ToLower()).Replace('\tests\','\{0}\' -f $env:BHProjectName)).Replace('_psm1.tests.ps1','.psm1')).Replace('_psd1.tests.ps1','.psd1')).replace('.json.tests.ps1','.json')).replace('.tests.ps1','.ps1')
+    # get a handle of the script to be tested through convention (case insensitive replace) - added support for different operating systems:
+    switch ($PSHOME){
+        # it's windows
+        {$_.StartsWith("C:\")} {$sut = ((((($Path.ToLower()).Replace('\tests\','\{0}\' -f $env:BHProjectName)).Replace('_psm1.tests.ps1','.psm1')).Replace('_psd1.tests.ps1','.psd1')).replace('.json.tests.ps1','.json')).replace('.tests.ps1','.ps1')}
+        {$_.StartsWith("/usr/local/")} {$sut = ((((($Path.ToLower()).Replace('/tests/','/{0}/' -f $env:BHProjectName)).Replace('_psm1.tests.ps1','.psm1')).Replace('_psd1.tests.ps1','.psd1')).replace('.json.tests.ps1','.json')).replace('.tests.ps1','.ps1')}
+
+    }
+    
     
     # get a handle to the module name for use in some tests
     $moduleName = $env:BHProjectName
